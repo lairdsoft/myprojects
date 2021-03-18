@@ -15,13 +15,13 @@ let getComputerChoice = () => {
 
 
     if(randomNum === 0) {
-      console.log('rock');
+      return 'rock';
     } else if (randomNum === 1) {
-      console.log('paper');
+      return 'paper';
     } else if (randomNum === 2) {
-      console.log('scissors');
+      return 'scissors';
     } else {
-      console.log('Error!');
+      return'Error!';
   };
 }
 
