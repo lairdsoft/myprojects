@@ -24,9 +24,9 @@ let getComputerChoice = () => {
     } else {
       return'Error!';
   };
-}
 
- /* switch (randomNum) {
+
+  /*switch (randomNum) {
     case 0:
     return 'rock';
     case 1:
@@ -78,7 +78,7 @@ function determineWinner(userChoice, computerChoice) {
 
 
 const playGame = () => {
-  let userChoice = getUserChoice('scissors');
+  let userChoice = getUserChoice('bomb');
   let computerChoice = getComputerChoice();
   console.log(`You chose: ${userChoice}.`);
   console.log(`The computer chose: ${computerChoice}.`)
