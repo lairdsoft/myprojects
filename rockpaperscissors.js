@@ -1,79 +1,77 @@
 const getUserChoice = userInput => {
-    userInput = userInput.toLowerCase();
-      if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
-    return userInput;
-  } else {
-    console.log('Error!');
-  }
-  
-  }
-  //console.log(getUserChoice('Paper'));
-  //console.log(getUserChoice('fork'));
-  
-  const getComputerChoice = () => {
-    let randomNum = Math.floor(Math.random() * 3); {
-      if(randomNum === 0) {
-        console.log('rock');
-      } else if (randomNum === 1) {
-        console.log('paper');
-      } else if (randomNum === 2) {
-        console.log('scissors');
-      } else {
-        console.log('Error!')
-      }
-     
-  
-    }
-  } 
-  //console.log(getComputerChoice());
-  //console.log(getComputerChoice());
-  //console.log(getComputerChoice());
-  
-  function determineWinner(userChoice, computerChoice) {
-  
+  userInput = userInput.toLowerCase();
+    if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' || userInput === 'bomb') {
+  return userInput;
+} else {
+  console.log('Error! Pick Rock, paper or scissors');
+}
+
+}
+//console.log(getUserChoice('Paper'));
+//console.log(getUserChoice('fork'));
+
+let getComputerChoice = () => {
+  let randomNum = Math.floor(Math.random() * 3); 
 
 
-  if (userChoice === computerChoice) {
-    return 'The Game is a Draw!';
-  } if (userChoice === 'rock') {
-
-    if (computerChoice === 'paper') {
-      return 'The computer has kicked your arse!';
+    if(randomNum === 0) {
+      console.log('rock');
+    } else if (randomNum === 1) {
+      console.log('paper');
+    } else if (randomNum === 2) {
+      console.log('scissors');
     } else {
-      return 'You bummed the computer!';
+      console.log('Error!')
+    };
+  }
+  
+
+//console.log(getComputerChoice());
+//console.log(getComputerChoice());
+//console.log(getComputerChoice());
+
+function determineWinner(userChoice, computerChoice) {
+  if (userChoice === 'bomb') {
+    return 'You won!'
+  }
+ 
+     if (userChoice === computerChoice) {
+        return 'The Game is a Draw!';
+    };
+    
+    if  (userChoice === 'rock') {
+      if (computerChoice === 'paper') {
+        return 'The computer has kicked your arse!';
+      } else {
+        return 'You beat the computer!';
+      };
     };
 
-    if (userChoice === 'paper') {
-
+    if  (userChoice === 'paper') {
       if (computerChoice === 'scissors') {
-        return 'The computer has just cut yir genitals aff!';
+        return 'The computer has kicked your arse!';
       } else {
-        return 'Just beware!';
+        return 'You beat the computer!';
       };
-      if (userChoice === 'scissors') {
-        if (computerChoice === 'rock') {
-          return 'Snap!';
-        } else {
-          return ':P';
-        }
+    };
 
-
-      }
-
-
-    }
-  }
-
-
-  console.log(determineWinner('paper', 'scissors'));
+    if  (userChoice === 'scissors') {
+      if (computerChoice === 'rock') {
+        return 'The computer has kicked your arse!';
+      } else {
+        return 'You beat the computer!';
+      };
+    };
 }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+const playGame = () => {
+  let userChoice = getUserChoice('rock');
+  let computerChoice = getComputerChoice();
+  console.log(`You chose: ${userChoice}.`);
+  console.log(`The computer chose: ${computerChoice}.`)
+  console.log(determineWinner(userChoice, computerChoice));
+
+}
+
+playGame();
