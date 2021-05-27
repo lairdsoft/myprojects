@@ -42,3 +42,21 @@
     margin: 20px auto;
     min-height: 100px;
 }
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 10%;
+    margin-top: 0px;
+    margin-right: 10%;
+    margin-bottom: 0px;
+    margin-left: 10%;
+
+}
+
+.font-panel {
+    width: 45%;
+    display: inline-block;
+}
+
+.font-label
+
