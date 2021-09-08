@@ -1,0 +1,60 @@
+h1 {
+    text-align: center;
+    background-color: tomato;
+    color:turquoise;
+}
+
+h2 {
+    text-align: center;
+    background-color: tomato;
+    color: turquoise;
+}
+
+body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+table {
+        border: 2px solid darkblue;
+        border-top-color: darkblue;
+        border-top-style: solid;
+        border-top-width: 2px;
+        border-right-color: darkblue;
+        border-right-style: solid;
+        border-right-width: 2px;
+        border-bottom-color: darkblue;
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-left-color: darkblue;
+        border-left-style: solid;
+        border-left-width: 2px;
+        border-image-outset: 0;
+        border-image-repeat: stretch;
+        border-image-slice: 100%;
+        border-image-source: none;
+        border-image-width: 1;
+        width: 650px;
+        margin: 0 auto;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-left: auto;
+
+}
+
+thead {
+       background-color: blue;
+}
+
+.code {
+    font-family: monospace;
+    background-color: beige;
+}
+
+td {
+    border-top: 1px solid darkblue;
+    border-top-style: solid;
+    border-top.width: 1px;
+}
